@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <script>
+        'use strict'
+        /*
+        5. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+        где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
+        переданного значения операции (использовать switch) выполнить одну из арифметических операций
+        (использовать функции из задания 4) и вернуть полученное значение.
+        */
+
+        function Sum(a, b) {
+            return a + b;
+        }
+
+        function Minus(a, b) {
+            return a - b;
+        }
+
+        function Div(a, b) {
+            return a / b;
+        }
+
+        function Multi(a, b) {
+            return a * b;
+        }
+        /**
+         * Функция реализует операции сложения, вычетания, деления и умножения.
+        */
+        function mathOperation(arg1, arg2, operation) {
+
+            switch (operation) {
+
+                case "sum":
+
+                    return Sum(arg1, arg2)
+
+                case "minus":
+
+                    return Minus(arg1, arg2)
+
+                case "div":
+
+                    return Div(arg1, arg2)
+
+                case "multi":
+
+                    return Multi((arg1, arg2))
+                default:
+
+                    throw new Error("Нужно ввести допустимую команду")
+            }
+        }
+
+        mathOperation(2, 3, "sum")
+
+    </script>
+
+</body>
+
+</html>
